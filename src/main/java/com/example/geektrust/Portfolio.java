@@ -8,9 +8,6 @@ public class Portfolio {
     public List<Fund> getCurrentPortfolio() {
         return currentPortfolio;
     }
-    public void setCurrentPortfolio(List<Fund> currentPortfolio) {
-        this.currentPortfolio = currentPortfolio;
-    }
     public void addStock(String stockName,String fundName,StockData stockData)
     {
         stockData.addStock(stockName,fundName);
@@ -19,7 +16,7 @@ public class Portfolio {
     {
         if(stockData.isFundNameValid(fundName))
         {
-            this.currentPortfolio.add(new Fund().setName(fundName).setStocks(stockData.getStockByFundName(fundName)));
+            this.currentPortfolio.add(new Fund(fundName,stockData.getStockByFundName(fundName)));
         }
         else
         {

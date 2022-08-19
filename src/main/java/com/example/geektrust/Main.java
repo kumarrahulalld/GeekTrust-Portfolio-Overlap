@@ -43,7 +43,7 @@ public class Main {
                 }
             }
             sc.close();
-        } catch (IOException e) {
+        } catch (Exception e) {
             System.out.println("FILE_NOT_FOUND");
         }
     }

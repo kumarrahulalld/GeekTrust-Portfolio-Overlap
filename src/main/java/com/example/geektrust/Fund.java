@@ -3,30 +3,20 @@ package com.example.geektrust;
 import java.util.HashSet;
 
 public class Fund {
-    public Fund()
+    public Fund(String name,HashSet<Stock> stocks)
     {
-
+        this.name=name;
+        this.stocks=stocks;
     }
     public String getName() {
         return name;
     }
-
-    public Fund setName(String name) {
-        this.name = name;
-        return this;
-    }
-
     public HashSet<Stock> getStocks() {
         return stocks;
     }
     public void addStock(String stockName)
     {
-        this.stocks.add(new Stock().setName(stockName));
-    }
-
-    public Fund setStocks(HashSet<Stock> stocks) {
-        this.stocks = stocks;
-        return this;
+        this.stocks.add(new Stock(stockName));
     }
     public Boolean isStockValid(Stock stock)
     {

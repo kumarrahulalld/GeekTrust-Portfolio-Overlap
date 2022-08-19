@@ -5,18 +5,9 @@ import java.util.Objects;
 public class Stock {
     private String name;
 
-    public Stock() {
+    public Stock(String name) {
+        this.name=name;
     }
-
-    public String getName() {
-        return name;
-    }
-
-    public Stock setName(String name) {
-        this.name = name;
-        return this;
-    }
-
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;

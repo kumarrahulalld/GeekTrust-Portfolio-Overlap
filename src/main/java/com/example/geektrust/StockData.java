@@ -1,14 +1,10 @@
 package com.example.geektrust;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.HashSet;
-import java.util.List;
+import java.util.*;
 import java.util.stream.Collectors;
 
 public class StockData {
-    private final static List<Fund> data=new ArrayList<>();
-    static
+    private  List<Fund> data=new ArrayList<>();
     {
         String name="ICICI_PRU_NIFTY_NEXT_50_INDEX";
         String[] stockList={"INDRAPRASTHA GAS LIMITED",
@@ -62,7 +58,7 @@ public class StockData {
                 "PIRAMAL ENTERPRISES LIMITED",
                 "PIDILITE INDUSTRIES LIMITED",
                 "BIOCON LIMITED"};
-        data.add(new Fund().setName(name).setStocks((HashSet<Stock>)Arrays.stream(stockList).map(stock->new Stock().setName(stock)).collect(Collectors.toSet())));
+        data.add(new Fund(name,(HashSet<Stock>)Arrays.stream(stockList).map(stock->new Stock(stock)).collect(Collectors.toSet())));
          name="PARAG_PARIKH_CONSERVATIVE_HYBRID";
          stockList=new String[]{"INDRAPRASTHA GAS LIMITED",
                  "SONA BLW PRECISION FORGINGS LIMITED",
@@ -129,8 +125,7 @@ public class StockData {
                  "BAJAJ FINANCE LIMITED",
                  "AIA ENGINEERING LIMITED",
                  "PI INDUSTRIES LIMITED"};
-        data.add(new Fund().setName(name).setStocks((HashSet<Stock>)Arrays.stream(stockList).map(stock->new Stock().setName(stock)).collect(Collectors.toSet())));
-        name="UTI_NIFTY_INDEX";
+data.add(new Fund(name,(HashSet<Stock>)Arrays.stream(stockList).map(stock->new Stock(stock)).collect(Collectors.toSet())));        name="UTI_NIFTY_INDEX";
         stockList=new String[]{"INFOSYS LIMITED",
                 "BHARTI AIRTEL LIMITED",
                 "EPL LIMITED",
@@ -188,8 +183,7 @@ public class StockData {
                 "BAJAJ FINANCE LIMITED",
                 "PI INDUSTRIES LIMITED",
                 "BIOCON LIMITED"};
-        data.add(new Fund().setName(name).setStocks((HashSet<Stock>)Arrays.stream(stockList).map(stock->new Stock().setName(stock)).collect(Collectors.toSet())));
-        name="AXIS_MIDCAP";
+data.add(new Fund(name,(HashSet<Stock>)Arrays.stream(stockList).map(stock->new Stock(stock)).collect(Collectors.toSet())));        name="AXIS_MIDCAP";
         stockList=new String[]{"ADITYA BIRLA FASHION AND RETAIL LIMITED",
                 "GRINDWELL NORTON LIMITED",
                 "3M INDIA LIMITED",
@@ -247,8 +241,7 @@ public class StockData {
                 "BAJAJ FINANCE LIMITED",
                 "AIA ENGINEERING LIMITED",
                 "PI INDUSTRIES LIMITED"};
-        data.add(new Fund().setName(name).setStocks((HashSet<Stock>)Arrays.stream(stockList).map(stock->new Stock().setName(stock)).collect(Collectors.toSet())));
-        name="MIRAE_ASSET_EMERGING_BLUECHIP";
+data.add(new Fund(name,(HashSet<Stock>)Arrays.stream(stockList).map(stock->new Stock(stock)).collect(Collectors.toSet())));        name="MIRAE_ASSET_EMERGING_BLUECHIP";
         stockList=new String[]{"INFOSYS LIMITED",
                 "BHARTI AIRTEL LIMITED",
                 "KANSAI NEROLAC PAINTS LIMITED",
@@ -308,8 +301,7 @@ public class StockData {
                 "HOUSING DEVELOPMENT FINANCE CORPORATION LIMITED",
                 "ITC LIMITED",
                 "FORTIS HEALTHCARE LIMITED"};
-        data.add(new Fund().setName(name).setStocks((HashSet<Stock>)Arrays.stream(stockList).map(stock->new Stock().setName(stock)).collect(Collectors.toSet())));
-        name="PARAG_PARIKH_FLEXI_CAP";
+data.add(new Fund(name,(HashSet<Stock>)Arrays.stream(stockList).map(stock->new Stock(stock)).collect(Collectors.toSet())));        name="PARAG_PARIKH_FLEXI_CAP";
         stockList=new String[]{"MPHASIS LIMITED",
                 "COMPUTER AGE MANAGEMENT SERVICES LIMITED",
                 "AMAZON.COM INC",
@@ -340,8 +332,7 @@ public class StockData {
                 "ITC LIMITED",
                 "TATA STEEL LIMITED",
                 "BALKRISHNA INDUSTRIES LIMITED"};
-        data.add(new Fund().setName(name).setStocks((HashSet<Stock>)Arrays.stream(stockList).map(stock->new Stock().setName(stock)).collect(Collectors.toSet())));
-        name="MIRAE_ASSET_LARGE_CAP";
+data.add(new Fund(name,(HashSet<Stock>)Arrays.stream(stockList).map(stock->new Stock(stock)).collect(Collectors.toSet())));        name="MIRAE_ASSET_LARGE_CAP";
         stockList=new String[]{"INFOSYS LIMITED",
                 "BHARTI AIRTEL LIMITED",
                 "EPL LIMITED",
@@ -405,8 +396,7 @@ public class StockData {
                 "BAJAJ FINANCE LIMITED",
                 "PI INDUSTRIES LIMITED",
                 "BIOCON LIMITED"};
-        data.add(new Fund().setName(name).setStocks((HashSet<Stock>)Arrays.stream(stockList).map(stock->new Stock().setName(stock)).collect(Collectors.toSet())));
-        name="SBI_LARGE_&_MIDCAP";
+data.add(new Fund(name,(HashSet<Stock>)Arrays.stream(stockList).map(stock->new Stock(stock)).collect(Collectors.toSet())));        name="SBI_LARGE_&_MIDCAP";
         stockList=new String[]{"SHEELA FOAM LIMITED",
                 "THE GREAT EASTERN SHIPPING COMPANY LIMITED",
                 "GARWARE TECHNICAL FIBRES LIMITED",
@@ -460,8 +450,7 @@ public class StockData {
                 "G R INFRA PROJECTS LIMITED",
                 "HATSUN AGRO PRODUCT LIMITED",
                 "RATNAMANI METALS & TUBES LIMITED"};
-        data.add(new Fund().setName(name).setStocks((HashSet<Stock>)Arrays.stream(stockList).map(stock->new Stock().setName(stock)).collect(Collectors.toSet())));
-        name="AXIS_BLUECHIP";
+data.add(new Fund(name,(HashSet<Stock>)Arrays.stream(stockList).map(stock->new Stock(stock)).collect(Collectors.toSet())));        name="AXIS_BLUECHIP";
         stockList=new String[]{"INFOSYS LIMITED",
                 "BHARTI AIRTEL LIMITED",
                 "MOTHERSON SUMI SYSTEMS LIMITED",
@@ -495,8 +484,7 @@ public class StockData {
                 "TITAN COMPANY LIMITED",
                 "MAHINDRA & MAHINDRA LIMITED",
                 "DIVI'S LABORATORIES LIMITED"};
-        data.add(new Fund().setName(name).setStocks((HashSet<Stock>)Arrays.stream(stockList).map(stock->new Stock().setName(stock)).collect(Collectors.toSet())));
-        name="ICICI_PRU_BLUECHIP";
+data.add(new Fund(name,(HashSet<Stock>)Arrays.stream(stockList).map(stock->new Stock(stock)).collect(Collectors.toSet())));        name="ICICI_PRU_BLUECHIP";
         stockList=new String[]{"INFOSYS LIMITED",
                 "BHARTI AIRTEL LIMITED",
                 "OIL & NATURAL GAS CORPORATION LIMITED",
@@ -564,8 +552,7 @@ public class StockData {
                 "ITC LIMITED",
                 "MAHINDRA & MAHINDRA LIMITED",
                 "BIOCON LIMITED"};
-        data.add(new Fund().setName(name).setStocks((HashSet<Stock>)Arrays.stream(stockList).map(stock->new Stock().setName(stock)).collect(Collectors.toSet())));
-    }
+data.add(new Fund(name,(HashSet<Stock>)Arrays.stream(stockList).map(stock->new Stock(stock)).collect(Collectors.toSet())));    }
     public Boolean isFundNameValid(String fundName)
     {
         for(Fund fund:data)
